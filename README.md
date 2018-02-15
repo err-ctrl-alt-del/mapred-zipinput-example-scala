@@ -1,4 +1,4 @@
-#MapReduce Example for Zip Files using Scala
+# MapReduce Example for Zip Files using Scala
 
 ## Getting Started
 ```
