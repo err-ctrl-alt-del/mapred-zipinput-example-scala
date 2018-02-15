@@ -44,7 +44,6 @@ class MapReduceTestCase extends TestCase {
     val testFile = new File(Resources.getResource("test.zip").getFile)
     val path = new Path(testFile.getAbsoluteFile.toURI)
     val split = new FileSplit(path, 0, testFile.length, null)
-    val inputFormat = ReflectionUtils.newInstance(classOf[ZipFileInputFormat], conf)
     val context = new TaskAttemptContextImpl(conf, new TaskAttemptID())
     reader = inputFormat.createRecordReader(split, context)
     reader.initialize(split, context)
